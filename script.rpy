@@ -16,6 +16,21 @@ define se = Character("Secco")
 define di = Character("Diavolo")
 define d = Character("Doppio")
 
+# Below is all the variables! They aren't needed now but will come in handy later.
+
+$ mpoint = 0
+$ rpoint = 0
+$ fpoint = 0
+$ ipoint = 0
+$ ghpoint = 0
+$ pepoint = 0
+$ prpoint = 0
+$ spoint = 0
+$ gpoint = 0
+$ cpoint = 0
+$ dipoint = 0
+$ sepoint = 0
+
 # The game starts here.
 
 label start:
@@ -278,11 +293,20 @@ label start:
 
     label choice2_sg:
 
+        "You gaze upon the group and notice the inseparable couple. Sorbet and Gelato you remember from their files, quite the names for quite the assassins. They have this ever prevailing look on their faces. Its like they are plotting something. You just can't help but chose them as your guides."
+
         d "Sorbet and Gelato."
 
-        g "I wasn't expecting you to choose that."
+        "The two looked to be a bit surprised by this action, but have appear to be happy to be chosen alongside one another. The men were practically doing it in every photo you saw and they keep up the reputation now. You just had to choose both."
+        "You look to the other teammates for their reactions. Some were suprised, others had a look of pity, and some even had a facial expression to match the couple."
 
-        s "I guess we might as well start before anything else."
+        s "Well, come on then, we don't have all day."
+
+        g "I guess not, isn't that right, new guy?"
+
+        "Gelato seemed to have some mockery in his tone, but the fact he was holding onto Sorbet like a baby koala didn't help the intimidation much."
+
+        d "Mhm."
 
         jump choice2_done
 
