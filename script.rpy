@@ -241,9 +241,19 @@ label start:
 
     label choice2_pe:
 
+        "You look across the group of hit men and notice a nervous yet excited man with a odd looking head. you remember from his file he has quite the effective stand that paired with his brothers, is almost unstoppable."
+
         d "Pesci."
 
-        pe "Oh! Uh. Me? Really?"
+        "The man look very excited, happy that he was picked, grinning like a little kid. the others looked suprised and some looked disappointed."
+
+        p "Come on this will be fun!"
+
+        "He grabs you by the hand, pulling you like a hyper four year old."
+
+        d "Hey! Whoa-"
+
+        "You're dragged out of the room."
 
         jump choice2_done
 
