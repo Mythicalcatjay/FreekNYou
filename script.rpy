@@ -275,10 +275,201 @@ label start:
 
     label choice2_m:
 
+        "Your attention is quickly caught by the scantily clad man in enough purple to make a little girl weep of pure joy. You notice his mask and your mind quickly scratches off anything to do with him being around kids as you remember his stand and his name. You couldn't resist asking him for the tour though."
+
         d "Melone."
 
-        m "Di molto!"
+        "The other assassins looked at you like you had just asked for a clown to lead you around. Some had looks of pity, while others were trying to hold back laughter. Oh, you just got yourself into something."
 
+        m "Di molto! Come with me."
+
+        "He dragged you along to the next room by the wrist, pulling out a piece of paper and a pen that you don't want to think much about where he pulled them out of."
+
+        m "So this is the common room. We mostly have our meeting, payment, and such here when Rizzy calls us all together. What's your birthday?"
+
+        "The question threw you off guard but it won't hurt to answer."
+
+        d "June 24."
+
+        m "Oh, so you're a Cancer like Pesci. Probably could've expected that. And your birthday... Di molto! Now, come this way."
+
+        "You didn't have time to react as you were next dragged into the kitchen, which was quite obviously so as Melone just scribbled something down on the paper."
+
+        m "So here is the kitchen, if you can't tell. What year were you born?"
+
+        "That's a bit odd. You have to wonder, but it's just when you were born. You did look rather young after all."
+
+        menu:
+
+            "1967":
+                jump choicem1_67
+
+            "1981":
+                jump choicem1_81
+
+                label choicem1_67:
+
+                    d "I was born in 1967"
+
+                    m "Interesting... What kind of moisturizer do you use?"
+
+                    d "I don't use one."
+
+                    jump choicem1_done
+
+                label choicem1_81:
+
+                    d "I was born in 1981."
+
+                    m "So you're 18. Guess they got you started young."
+
+                    jump choicem1_done
+
+        label choicem1_done:
+
+        "Next up he drags you to a hallway where each door has something marked as he kept writing. It's quite easy to tell who's is who's as Melone kicks open the bathroom door and walks inside. You notice the distinct lack of a mirror."
+
+        m "This is the bathroom, you can put your toiletries under the sink or in the shower. Anyway, what's your blood type?"
+
+        "You could spot the trend."
+
+        menu:
+
+            "What's with all these questions?":
+                jump choicem2_what
+
+            "Blood":
+                jump choicem2_whatevertypeheendsuphavingidfk
+
+            "Red.":
+                jump choicem2_red
+
+                label choicem2_what:
+
+                    "You were getting a bit angry at all this."
+
+                    d "What's with all these questions?"
+
+                    m "I'm just trying to get to know you better. Rizzy didn't let me read your file. Something about privacy. I guess it might be"
+
+                    jump choicem2_done
+
+                label choicem2_whatevertypeheendsuphavingidfk:
+
+                    d "Blood."
+
+                    m "Di molto! Just as I expected. This is perfect."
+
+                    jump choicem2_done
+
+                label choicem2_red:
+
+                    d "Oh, it's red!"
+
+                    "He gives this look that implied he was about to call you retarded but held back. Too bad you were right! He did write something else down though."
+
+                    jump choicem2_done
+
+        label choicem2_done:
+
+        "He skips out the door and goes to open more down the line. First the one with one of those singing bass signs on the outside. Locked. Then once that had this very elegant look to it but the distinct smell of shit. Locked. The one with the do not disturb sign written in doctor's handwriting was skipped. Must have been Melone's. "
+
+        "This trend kept on going with him getting progressively poutier. He did open one with what looked to be some snowflake details, but promptly got. . ."
+
+        gh "FUCK OFF MELONE!"
+
+        "Ah. Everyone knew he was coming. At least almost everyone. He managed to open a door with loud hissing coming from behind. Ah, poor bastard."
+
+        m "Di molto! Formaggio left his room unlocked."
+
+        "A grey cat came running out, hissing at the two of you."
+
+        m "Hello to you too, Anal."
+
+        "Melone walked in like he owned the place. strutting over and looking into some things."
+
+        m "Oh well, this is Formaggio's room. By the way, do you happen to know what time you were born?"
+
+        menu:
+
+            "No.":
+                jump choicem3_no
+
+            "Cut it out.":
+                jump choicem3_cut
+
+                label choicem3_no:
+
+                    d "No, I'm sorry."
+
+                    m "I guess that's just how it goes sometimes."
+
+                    jump choicem3_done
+
+                label choicem3_cut:
+
+                    d "Cut it out with the questions!"
+
+                    m "Oh, don't be such a prune, Doppio. This is going to help you."
+
+                    "Bastard."
+
+                    jump choicem3_done
+
+        label choicem3_done:
+
+        "He continued to look around for a bit until he seemed to have a look of frustration on his face. He popped on up."
+
+        m "Come now, let me show you to your room."
+
+        "Melone never gave you time to respond, which seemed to be a growing trend. He led you to a barren room with some furniture practically at the end of the hall if it weren't for the room at the end with another do not enter sign."
+
+        m "This is where you'll be staying from now on, Doppio. If you wouldn't mind, could I look at your palm?"
+
+        menu:
+
+            "I would mind.":
+                jump choicem4_no
+
+            "Uh sure.":
+                jump choicem4_yes
+
+                label choicem4_no:
+
+                    d "I would mind."
+
+                    "He looked defeatedly at your shoes. Why it was your's he was looking at. You couldn't figure out until he licked his lips. Foot fucker."
+
+                jump choicem4_done
+
+                label choicem4_81:
+
+                    d "Uh, sure."
+
+                    "You sat down on one of the covered pieces of furniture as he began to inspect it. You were beginning to expect the vocal tic. Low and behold. . ."
+
+                    m "Di molto!"
+
+                    "And you too just sat like that for a bit. Him holding your hand and inspecting it. He seemed to have such a close fascination."
+
+                    "Every once and a while he would turn to take a note or two and then go back to inspecting it."
+
+                    "Honestly, his hands were much softer then you'd ever guess that they'd be. They smelt vaguely of lavender too. He had to be using some sort of lotion on them."
+
+                    "But it was still much nicer to watch him as seemed to discover things in your hand. Even though there was a small part of you who wanted to strangle him for poking his nose into things."
+
+                    "But you ignored it."
+
+                    "Eventually he got up though, he did look at you with a small smile though."
+
+                    jump choicem4_done
+
+        label choicem4_done:
+
+        m "I guess it would be time for me to get heading out so you can start organizing."
+
+        "And with that, he pranced out and shut the door."
+        
         jump choice2_done
 
     label choice2_gh:
