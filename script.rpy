@@ -183,6 +183,8 @@ label start:
 
     s "Well it looks like he might not last that long."
 
+    show doppio_neutral
+
     "More talking just kept going back and fourth and back and fourth. You felt like you almost couldn't breath with the whole squad acting up."
 
     # Risotto Insult Below! Right when things stop
@@ -194,6 +196,8 @@ label start:
     "Risotto Nero, the leader of La Squadra."
 
     # Goofy refernce Below
+
+    show doppio_smile
 
     d "Yes. I am."
 
@@ -233,9 +237,63 @@ label start:
 
     label choice2_r:
 
-        d "Ypu."
+        "You decided to go with the man, the myth, the legend himself. Who else was there to choose? Well, there were a bunch of way too crazy assassins and he had nice tiddies."
+
+        d "Risotto."
+
+        "All of the people who considered him higher in rank seemed to understand. Somewhere a little jealous, most notably the creeps, but it seemed to be overwhelmingly okay-ed."
 
         r "Hm."
+
+        scene la_squadra_hideout
+
+        "He motioned for you to followed as he got you two clear from the door. Upfront was a concrete-walled room with some green couches. Pretty simple but well used and loved."
+
+        r "This is the meeting room. Normally everyone huddles here when its time for their paychecks."
+
+        "He quieted back down rather fast. The little bits of his baritone was nice but it's nice that he just lead you from one place to the other rather than giving you too much information. Up next was the kitchen, of which he just let out a noise of acknowledgment."
+
+        "He was polite but good lord it was like talking to a brick wall with fat tits."
+
+        menu:
+
+            "Start a conversation.":
+                jump choicer1_yes
+
+            "Let him stay silent.":
+                jump choicer1_no
+
+                label choicer1_yes:
+
+                    d "So. . . How's the weather up there?"
+
+                    show doppio_crack
+
+                    "Shit. Wrong thing."
+
+                    d "I mean weather in gen-"
+
+                    "You hear a groan. Yeah he this isn't his first time hearing this."
+
+                    r "It's raining."
+
+                    "And with that, you were a little bit soggier with some spit. Now was that hot or was that just gross?"
+
+                    show doppio_gasp
+
+                    "That was probably just karma."
+
+                    jump choicer1_done
+
+                label choicer1_no:
+
+                    "Might as well not invote his rage."
+
+                    jump choicer1_done
+
+        label choicer1_done:
+
+        show doppio_smile
 
         jump choice2_done
 
@@ -281,9 +339,19 @@ label start:
 
         "The other assassins looked at you like you had just asked for a clown to lead you around. Some had looks of pity, while others were trying to hold back laughter. Oh, you just got yourself into something."
 
+        show doppio_happy at left
+
+        show melone_smile at right
+
         m "Di molto! Come with me."
 
         "He dragged you along to the next room by the wrist, pulling out a piece of paper and a pen that you don't want to think much about where he pulled them out of."
+
+        scene la_squadra_hideout
+
+        show doppio_neutral at left
+
+        show melone_smile at right
 
         m "So this is the common room. We mostly have our meeting, payment, and such here when Rizzy calls us all together. What's your birthday?"
 
@@ -321,7 +389,7 @@ label start:
 
                     d "I was born in 1981."
 
-                    m "So you're 18. Guess they got you started young."
+                    m "So you're 18? Guess they got you started young."
 
                     jump choicem1_done
 
@@ -346,6 +414,10 @@ label start:
 
                 label choicem2_what:
 
+                    show doppio_neutral at left
+
+                    show melone_smile at right
+
                     "You were getting a bit angry at all this."
 
                     d "What's with all these questions?"
@@ -366,11 +438,21 @@ label start:
 
                     d "Oh, it's red!"
 
-                    "He gives this look that implied he was about to call you retarded but held back. Too bad you were right! He did write something else down though."
+                    show doppio_happy at left
+
+                    show melone_ugh at right
+
+                    "He gives this look that implied he was about to call you a slur but held back. Too bad you were right! He did write something else down though."
 
                     jump choicem2_done
 
         label choicem2_done:
+
+        scene la_squadra_rooms
+
+        show doppio_neutral at right
+
+        show melone_smile at left
 
         "He skips out the door and goes to open more down the line. First the one with one of those singing bass signs on the outside. Locked. Then once that had this very elegant look to it but the distinct smell of shit. Locked. The one with the do not disturb sign written in doctor's handwriting was skipped. Must have been Melone's. "
 
@@ -408,6 +490,10 @@ label start:
 
                 label choicem3_cut:
 
+                    show doppio_angy at right
+
+                    show melone_upset at left
+
                     d "Cut it out with the questions!"
 
                     m "Oh, don't be such a prune, Doppio. This is going to help you."
@@ -438,11 +524,23 @@ label start:
 
                     d "I would mind."
 
+                    show doppio_angy at left
+
+                    show melone_tongue at right
+
                     "He looked defeatedly at your shoes. Why it was your's he was looking at. You couldn't figure out until he licked his lips. Foot fucker."
+
+                    $persistent.unlock_m1bad = true
+
+                    show screen txt ("Achievent unlocked! Hahahahaha. Shut up!")
 
                 jump choicem4_done
 
-                label choicem4_81:
+                label choicem4_yes:
+
+                    show doppio_happy at left
+
+                    show melone_smile at right
 
                     d "Uh, sure."
 
@@ -462,6 +560,10 @@ label start:
 
                     "Eventually he got up though, he did look at you with a small smile though."
 
+                    $persistent.unlock_m1good = true
+
+                    show screen txt ("Achievent unlocked! 50 First Dates.")
+
                     jump choicem4_done
 
         label choicem4_done:
@@ -469,47 +571,99 @@ label start:
         m "I guess it would be time for me to get heading out so you can start organizing."
 
         "And with that, he pranced out and shut the door."
-        
-        jump choice2_done
-
-    label choice2_gh:
-
-        "Looking over the group, they all seem to be somewhat scowling at you. Their lips pursed with what you'd call 'professional distaste'. Asking for a tour of the establishment was going to be a challenge from every one of them, but its a challenge you must overcome for now."
-        "Through the serious, stoic and stone cold faces of the group, one stood out to you in particular, the familiar blue haired hothead of the group, clad in all white and his signature red glasses, Ghiaccio."
-
-        d "Ghiaccio."
-
-        "As soon as you vocalised your choice, you notice a quick yet obvious change in the air around you. Snickers were heard and small cracking smiles could be seen from the group as the aforementioned ice powered hot head began twitching and shaking like a dodgy Nokia cell phone. Gripping his temples he gritted his teeth and let out an angered cry of annoyance, obviously he wasn't happy about being tasked with this, but hey, he didn't have a choice now did he?"
-        "This was going to be fun."
 
         jump choice2_done
 
-    label choice2_i:
+        label choice2_gh:
 
-        d "Illuso."
+            "Looking over the group, they all seem to be somewhat scowling at you. Their lips pursed with what you'd call 'professional distaste'. Asking for a tour of the establishment was going to be a challenge from every one of them, but its a challenge you must overcome for now."
 
-        i "Heh, okay."
+            "Through the serious, stoic and stone cold faces of the group, one stood out to you in particular, the familiar blue haired hothead of the group, clad in all white and his signature red glasses, Ghiaccio."
 
-        jump choice2_done
+            d "Ghiaccio."
 
-    label choice2_sg:
+            "As soon as you vocalised your choice, you notice a quick yet obvious change in the air around you. Snickers were heard and small cracking smiles could be seen from the group as the aforementioned ice powered hot head began twitching and shaking like a dodgy Nokia cell phone. Gripping his temples he gritted his teeth and let out an angered cry of annoyance, obviously he wasn't happy about being tasked with this, but hey, he didn't have a choice now did he?"
 
-        "You gaze upon the group and notice the inseparable couple. Sorbet and Gelato you remember from their files, quite the names for quite the assassins. They have this ever prevailing look on their faces. Its like they are plotting something. You just can't help but chose them as your guides."
+            "This was going to be fun."
 
-        d "Sorbet and Gelato."
+            "The group looked over at the seething blue hairball with legs throwing a temper tantrum with both a look of pity and amusement."
 
-        "The two looked to be a bit surprised by this action, but have appear to be happy to be chosen alongside one another. The men were practically doing it in every photo you saw and they keep up the reputation now. You just had to choose both."
-        "You look to the other teammates for their reactions. Some were suprised, others had a look of pity, and some even had a facial expression to match the couple."
+            "With a final frosty huff, he straightened himself out. Not calm, but just relaxed enough on the outside to present himself as normal. "
 
-        s "Well, come on then, we don't have all day."
+            gh "Fine. Don’t fuckin’ mock me with stupid questions while you’re here"
 
-        g "I guess not, isn't that right, new guy?"
+            "You nod as he drags his feet on the ground as he walked, hands stuffed in his pockets, not bothering with any nonchalant chatter as he lead you through the building."
 
-        "Gelato seemed to have some mockery in his tone, but the fact he was holding onto Sorbet like a baby koala didn't help the intimidation much."
+            gh "This is the meeting room, where people keep leaving cards, pins and random crap everywhere!?"
 
-        d "Mhm."
+        menu:
+            "I would mind.":
+                jump choicegh1_is
 
-        jump choice2_done
+            "Say nothing":
+                jump choicegh1_not
+
+            "It’s…nice?":
+                jump choicegh1_nice
+
+                "Ghiacchio turns to you, his eyes blazing. You’d be surprised if he hadn’t melted those glasses to his face. Pinching his temples, he stomps, looking like he would rip his own and possibly your hair out."
+
+                gh "YES. IT IS, BUT IT WOULDN’T BE IF EVERYONE PICKED UP AFTER THEIR SHIT. WE’RE ASSASINS FOR FUCKS-SAKE, AND THEY CAN’T PICK UP AFTER THEMSELVES. IT PISSES ME OFF DAMN IT!"
+
+                "He doesn't pick anything up, instead he does the opposite and starts curb stomping it into the floor, crushing the box of cards under his thickly soled sneaker."
+
+                "This serves as just enough of an indicator for you to quietly shuffle back."
+
+                "After his little tantrum, he returns to you and grumpily continues the tour of the hideout."
+
+                label choicgh1_is:
+
+                jump choicegh1_done
+
+                label choicegh1_not:
+
+                gh "Good. Glad you aren't annoying."
+
+                jump choicegh1_done
+
+                label choicgh1_nice:
+
+                "Ghiacchio glared at you, only seething and muttering something incoherent, before continuing to take you around the house."
+
+                gh "Don't sugar coat shit with me. I’m already going out of my way to do this, I don’t want to deal with some kiss-ass shit while I’m doing it."
+
+                jump choicegh1_done
+
+        label choicegh1_done:
+
+            jump choice2_done
+
+        label choice2_i:
+
+            d "Illuso."
+
+            i "Heh, okay."
+
+            jump choice2_done
+
+        label choice2_sg:
+
+            "You gaze upon the group and notice the inseparable couple. Sorbet and Gelato you remember from their files, quite the names for quite the assassins. They have this ever prevailing look on their faces. Its like they are plotting something. You just can't help but chose them as your guides."
+
+            d "Sorbet and Gelato."
+
+            "The two looked to be a bit surprised by this action, but have appear to be happy to be chosen alongside one another. The men were practically doing it in every photo you saw and they keep up the reputation now. You just had to choose both."
+            "You look to the other teammates for their reactions. Some were suprised, others had a look of pity, and some even had a facial expression to match the couple."
+
+            s "Well, come on then, we don't have all day."
+
+            g "I guess not, isn't that right, new guy?"
+
+            "Gelato seemed to have some mockery in his tone, but the fact he was holding onto Sorbet like a baby koala didn't help the intimidation much."
+
+            d "Mhm."
+
+            jump choice2_done
 
     label choice2_done:
 
